@@ -1,32 +1,51 @@
-## Dev environment: Windows 10, VSCode
+# Employee Churn Prediction Flask App
 
-# To run the project in localhost (without Docker)
+## Development Environment
 
-# Make sure you have the Python 3.11.0 installed on your PC
+- **Operating System**: Windows 10
+- **IDE**: Visual Studio Code (VSCode)
 
-# Install and activate virtual environment
+## Running the Project Locally (Without Docker)
 
-python -m venv myenv
+Before running the project, ensure that you have Python 3.11.0 installed on your PC.
 
-myenv/Scripts/activate
+### Setting up your Environment
 
-# Upgrade pip installer
+#### Create a virtual environment named 'myenv'
 
-python -m pip install pip --upgrade
+* python -m venv myenv *
 
-# Install python packages:
+#### Activate the virtual environment (Windows)
 
-pip install -r requirements.txt
+* myenv\Scripts\activate *
 
-# Run the app
+#### Upgrading Pip
 
-py app.py
+* python -m pip install pip --upgrade *
 
-# To run the project in localhost (Docker)
+#### Install dependencies
 
-# Make sure you have Docker installed on your system. You can download and install Docker from the official website: https://www.docker.com/get-started
-# Navigate to the project directory
+* pip install -r requirements.txt *
 
-docker pull shahinmahmud53/employee-churn-prediction-flask-app:v1
+#### Run the app
 
-docker run -d --name container_name -p 8080:5000 shahinmahmud53/employee-churn-prediction-flask-app:v1
+* py app.py *
+
+
+## Running the Project Locally (Docker)
+
+### Make sure you have Docker installed on your system. You can download and install Docker from the official website: https://www.docker.com/get-started
+
+#### Pulling the Docker image
+
+* cd /path/to/employee-churn-prediction-flask-app *
+
+* docker pull shahinmahmud53/employee-churn-prediction-flask-app:v1 *
+
+#### Running a Docker Container
+
+* docker run -d --name container_name -p 8080:5000 shahinmahmud53/employee-churn-prediction-flask-app:v1 *
+
+Replace container_name with a suitable name for your Docker container.
+
+Now, you can access the app in your web browser at http://localhost:8080.
