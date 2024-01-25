@@ -5,47 +5,60 @@
 - **Operating System**: Windows 10
 - **IDE**: Visual Studio Code (VSCode)
 
-## Running the Project Locally (Without Docker)
+## Running the Project Locally
 
-Before running the project, ensure that you have Python 3.11.0 installed on your PC.
+### Without Docker
 
-### Setting up your Environment
+Ensure you have Python 3.11.0 installed on your PC before proceeding.
 
-#### Create a virtual environment named 'myenv'
+#### Setting Up Your Environment
 
-* python -m venv myenv 
+1. **Create a Virtual Environment**
+   ```bash
+   python -m venv myenv
+   ```
 
-#### Activate the virtual environment (Windows)
+2. **Activate the Virtual Environment (Windows)**
+   ```bash
+   myenv\Scripts\activate
+   ```
 
-* myenv\Scripts\activate 
+3. **Upgrade Pip**
+   ```bash
+   python -m pip install --upgrade pip
+   ```
 
-#### Upgrading Pip
+4. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-* python -m pip install pip --upgrade 
+5. **Run the App**
+   ```bash
+   py app.py
+   ```
 
-#### Install dependencies
+### With Docker
 
-* pip install -r requirements.txt 
+#### Prerequisites
+- Make sure Docker is installed on your system. Download it from the [official Docker website](https://www.docker.com/get-started).
 
-#### Run the app
+#### Running the Docker Version
 
-* py app.py 
+1. **Navigate to the Project Directory**
+   ```bash
+   cd /path/to/employee-churn-prediction-flask-app
+   ```
 
+2. **Pull the Docker Image**
+   ```bash
+   docker pull shahinmahmud53/employee-churn-prediction-flask-app:v1
+   ```
 
-## Running the Project Locally (Docker)
+3. **Run a Docker Container**
+   Replace `container_name` with a suitable name for your Docker container.
+   ```bash
+   docker run -d --name container_name -p 8080:5000 shahinmahmud53/employee-churn-prediction-flask-app:v1
+   ```
 
-### Make sure you have Docker installed on your system. You can download and install Docker from the official website: https://www.docker.com/get-started
-
-#### Pulling the Docker image
-
-* cd /path/to/employee-churn-prediction-flask-app 
-
-* docker pull shahinmahmud53/employee-churn-prediction-flask-app:v1 
-
-#### Running a Docker Container
-            
-* docker run -d --name container_name -p 8080:5000 shahinmahmud53/employee-churn-prediction-flask-app:v1 
-
-Replace container_name with a suitable name for your Docker container.
-
-Now, you can access the app in your web browser at http://localhost:8080.
+Now, you can access the app in your web browser at [http://localhost:8080](http://localhost:8080).

@@ -53,5 +53,4 @@ This guide outlines the steps to set up Docker for this project.
   docker push user_name/repository_name:v1
   ```
 
-- Docker Hub Repository Link: [Employee Churn Prediction Flask App](https://hub.docker.com/r/shahinmahmud53/employee-churn-prediction-flask-app)
-```
+#### Docker Hub Repository Link: [Employee Churn Prediction Flask App](https://hub.docker.com/r/shahinmahmud53/employee-churn-prediction-flask-app)
