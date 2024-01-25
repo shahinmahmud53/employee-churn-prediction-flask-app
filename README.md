@@ -1,4 +1,4 @@
-# This project has been developed using Windows 10 machine and VSCode. 
+## Dev environment: Windows 10, VSCode
 
 # To run the project in localhost (without Docker)
 
