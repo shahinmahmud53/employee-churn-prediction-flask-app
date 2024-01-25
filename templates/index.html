@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Churn Prediction</title>
+    <!-- Link to the style.css file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Employee Churn Prediction</h1>
+    <form method="POST">
+        <label for="satisfaction">Satisfaction Level (range 0 to 1):</label>
+        <input type="number" step="0.01" id="satisfaction" name="satisfaction" min="0" max="1" required><br><br>        
+
+        <label for="last_evaluation">Last Evaluation (range 0 to 1):</label>
+        <input type="number" step="0.01" id="last_evaluation" name="last_evaluation" min="0" max="1" required><br><br>
+
+        <label for="n_projects">Number of Projects (range 0 to 7):</label>
+        <input type="number" id="n_projects" name="n_projects" min="0" max="7" required><br><br>
+
+        <label for="avg_monthly_hrs">Average Monthly Hours (range 0 to 310):</label>
+        <input type="number" id="avg_monthly_hrs" name="avg_monthly_hrs" min="0" max="310" required><br><br>
+
+        <label for="tenure">Time Spent in Company (in years) (range 0 to 10):</label>
+        <input type="number" step="0.1" id="tenure" name="tenure" min="0" max="10" required><br><br>
+
+        <label for="recently_promoted">Recently Promoted?:</label>
+        <select id="recently_promoted" name="recently_promoted" required>
+            <option value="Yes">Yes</option>
+            <option value="Missing">Missing</option>
+        </select><br><br>
+
+        <label for="filed_complaint">Filed Complaint?:</label>
+        <select id="filed_complaint" name="filed_complaint" required>
+            <option value="Yes">Yes</option>
+            <option value="Missing">Missing</option>
+        </select><br><br>
+
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="engineering">Engineering</option>
+            <option value="support">Support</option>
+            <option value="sales">Sales</option>
+            <option value="IT">IT</option>
+            <option value="product">Product</option>
+            <option value="marketing">Marketing</option>
+            <option value="procurement">Procurement</option>
+            <option value="finance">Finance</option>
+            <option value="Missing">Missing</option>
+            <option value="management">Management</option>
+            <option value="admin">Admin</option>
+        </select><br><br>
+
+        <label for="salary">Salary:</label>
+        <select id="salary" name="salary" required>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result_message %}
+        <h2>Result:</h2>
+        <p>{{ result_message }}</p>
+    {% endif %}
+</body>
+</html>
