@@ -1,6 +1,3 @@
-Certainly! Here's the rewritten README.md file with proper Markdown formatting:
-
-```markdown
 # Docker Setup for Project
 
 This guide outlines the steps to set up Docker for this project.
