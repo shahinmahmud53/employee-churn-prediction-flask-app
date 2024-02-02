@@ -3,4 +3,4 @@ Docker repo link:
 https://hub.docker.com/r/shahinmahmud53/employee-churn-prediction-flask-app
 
 dataset-1: 14249 employees
-dataset-2: 1470 employees
+dataset-2: 1469 employees
