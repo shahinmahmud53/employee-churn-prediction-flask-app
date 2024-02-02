@@ -5,34 +5,34 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load your saved pipeline (including preprocessor and model)
-pipeline = joblib.load('models/dataset-1_model_rf.pkl')
+pipeline = joblib.load('models/dataset-2_model_lr.pkl')
 
 # Define a route for the home page
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         # Get user input from the form
-        satisfaction = float(request.form['satisfaction'])
-        last_evaluation = float(request.form['last_evaluation'])
-        n_projects = int(request.form['n_projects'])
-        avg_monthly_hrs = int(request.form['avg_monthly_hrs'])
-        tenure = int(request.form['tenure'])
-        recently_promoted = request.form['recently_promoted']
-        filed_complaint = request.form['filed_complaint']
-        department = request.form['department']
-        salary = request.form['salary']
+        EnvironmentSatisfaction = int(request.form['EnvironmentSatisfaction'])
+        JobInvolvement = int(request.form['JobInvolvement'])
+        JobLevel = int(request.form['JobLevel'])
+        JobSatisfaction = int(request.form['JobSatisfaction'])
+        OverTime = int(request.form['OverTime'])  # Assuming OverTime is a binary field (1 for Yes, 0 for No)
+        BusinessTravel = request.form['BusinessTravel']
+        EducationField = request.form['EducationField']
+        JobRole = request.form['JobRole']
+        MaritalStatus = request.form['MaritalStatus']
 
         # Create a DataFrame with user input
         user_data = pd.DataFrame({
-            'satisfaction': [satisfaction],
-            'last_evaluation': [last_evaluation],
-            'n_projects': [n_projects],
-            'avg_monthly_hrs': [avg_monthly_hrs],
-            'tenure': [tenure],
-            'recently_promoted': [recently_promoted],
-            'filed_complaint': [filed_complaint],
-            'department': [department],
-            'salary': [salary]
+            'EnvironmentSatisfaction': [EnvironmentSatisfaction],
+            'JobInvolvement': [JobInvolvement],
+            'JobLevel': [JobLevel],
+            'JobSatisfaction': [JobSatisfaction],
+            'OverTime': [OverTime],
+            'BusinessTravel': [BusinessTravel],
+            'EducationField': [EducationField],
+            'JobRole': [JobRole],
+            'MaritalStatus': [MaritalStatus]
         })
 
         # Preprocess user input and make a prediction using the loaded pipeline
