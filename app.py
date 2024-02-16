@@ -12,8 +12,8 @@ pipeline = joblib.load('models/dataset-1_model_rf.pkl')
 def index():
     if request.method == 'POST':
         # Get user input from the form
-        satisfaction = float(request.form['satisfaction'])
-        last_evaluation = float(request.form['last_evaluation'])
+        satisfaction = int(request.form['satisfaction'])
+        last_evaluation = int(request.form['last_evaluation'])
         n_projects = int(request.form['n_projects'])
         avg_monthly_hrs = int(request.form['avg_monthly_hrs'])
         tenure = int(request.form['tenure'])
