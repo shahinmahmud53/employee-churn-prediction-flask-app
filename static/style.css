@@ -7,6 +7,21 @@ body {
     text-align: center;
 }
 
+/* Style for logo container */
+.logo-container {
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Horizontally centers the child elements (the img) */
+    align-items: center; /* Vertically centers the child elements (the img) */
+    background-color: black; /* Sets the background color of the container */
+    height: 100px; /* Set a specific height for your container */
+    width: 100%; /* Set the width of your container. Adjust as necessary. */
+}
+
+.logo-container img {
+    max-width: 500px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Style for the header */
 h1 {
     background-color: #333;
