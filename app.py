@@ -40,9 +40,9 @@ def index():
 
         # Determine the result message
         if prediction[0] == 1:
-            result_message = "Employee may leave the organization"
+            result_message = "DND Employee / Member most likely will not stay with DND"
         else:
-            result_message = "Employee may stay with the organization"
+            result_message = "DND Employee / Member most likely will stay with DND"
 
         return render_template('index.html', result_message=result_message)
 

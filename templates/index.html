@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Employee / Member Churn Prediction</title>
+    <title>DND Employee / Member Churn Prediction</title>
     <!-- Link to the style.css file -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Employee / Member Churn Prediction</h1>
+    <!--- Logo image --->
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='sig-en1.png') }}" alt="DND Logo">
+    </div> 
+    <h1>DND Employee / Member Churn Prediction</h1>
     <form method="POST">
         <label for="satisfaction">Satisfaction Level (%):</label>
         <input type="number" step="0.01" id="satisfaction" name="satisfaction" min="0" max="100" required><br><br>        
@@ -21,7 +25,7 @@
         <label for="avg_monthly_hrs">Average Monthly Hours (range 0 to 310):</label>
         <input type="number" id="avg_monthly_hrs" name="avg_monthly_hrs" min="0" max="310" required><br><br>
 
-        <label for="tenure">Time Spent in Company (in years) (range 0 to 10):</label>
+        <label for="tenure">Time spent at DND (in years) (range 0 to 10):</label>
         <input type="number" step="0.1" id="tenure" name="tenure" min="0" max="10" required><br><br>
 
         <label for="recently_promoted">Recently Promoted?:</label>
